@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    background-color: #161717;
+    color: white;
+    margin-top: 60px;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 450px; 
+    border: 2px solid #212121;
+    padding: 30px 50px;
+    border-radius: 10px;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btn-back{
+    background-color: #822225;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top:9%;
+    left: 62%;
+}
+.btn-back img{
+    width: 50%;
+    height: 50%;
+}
+
+.section-inputs{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+label span{
+    font-weight: 700;
+    color: white;
+}
+label input{
+    width: 80%;
+    background-color: #212121;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14pt;
+    transition: background-color 0.2s, border 0.2s;
+}
+label input:focus{
+    background-color: #454045;
+    border: 1px solid #eeeef3;
+}
+label input:hover{
+    background-color: #454045;
+    border: 1px solid #eeeef3;
+}
+
+.boton{  
+    align-self: center;
+    display: flex;
+}
+.google-btn{
+    background-color: #1A73E8; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;   
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+}
+.google-btn:hover{
+    opacity: 0.75;
+}
+.google-btn picture{
+    width: 35px;
+    background-color: white;
+    height: 35px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.google-btn picture img{
+    width: 75%;    
+}
+.google-btn span{
+    color: white;
+    font-weight: 500;
+    padding: 15px;
+}
+
+.separator{
+    display: flex;/*poner todo en una misma linea*/
+    width: 100%;
+    gap: 15px;
+}
+.separator hr{
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+.separator span{
+    color: white;
+}
+
+.submit-btn{
+    background-color: #822225;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 14pt;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    opacity: 0.75;
+}

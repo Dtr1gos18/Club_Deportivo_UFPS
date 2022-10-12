@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <h3>Registrarte</h3>
+            <a href="/html/index.html">
+                <button type="submit" class="btn-back"><img src="../img/back.png" alt="boton-back"/></button>
+            </a>
+        </div>
+        <form action="" method>
+            <div class="section-inputs">
+                <label for="name">
+                    <span>Nombres</span>
+                    <input type="text" name="name" id="name">
+                </label><!--  for referencia al id del input-->
+                <label for="last-name">
+                    <span>Apellidos</span>
+                    <input type="text" name="last-name" id="last-name">
+                </label>
+            </div>
+            <label for="email">
+                <span>Email</span>
+                <input type="email" name="email" id="email">
+            </label>
+            <label for="password">
+                <span>Contraseña</span>
+                <input type="password" name="password" id="password" placeholder="6+ characters">
+            </label>
+            <button type="submit" class="submit-btn">Crear cuenta</button>
+            <div class="separator">
+                <hr>
+                <span>O</span>
+                <hr>
+            </div>
+            <div class="boton">
+                <button class="google-btn">
+                    <picture>
+                        <img src="../img/logoGoogle.png" alt="logo google">
+                    </picture>
+                    <span>Registrarse con Google</span>
+                </button>
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
