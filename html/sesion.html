@@ -4,29 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../img/LogoDeportivo.png" />
     <link rel="stylesheet" href="../css/registro.css">
-    <title>Registrar</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Iniciar Sesión</title>
 </head>
 <body>
+    <div class="card">
     <div class="container">
         <div class="top">
-            <h3>Registrarte</h3>
+            <h3>Iniciar Sesión</h3>
             <a href="/html/index.html">
                 <button type="submit" class="btn-back"><img src="../img/back.png" alt="boton-back"/></button>
             </a>
         </div>
         <form action="" method>
-            <div class="section-inputs">
-                <label for="name">
-                    <span>Nombres</span>
-                    <input type="text" name="name" id="name">
-                </label><!--  for referencia al id del input-->
-                <label for="last-name">
-                    <span>Apellidos</span>
-                    <input type="text" name="last-name" id="last-name">
-                </label>
-            </div>
             <label for="email">
                 <span>Email</span>
                 <input type="email" name="email" id="email">
@@ -35,11 +26,7 @@
                 <span>Contraseña</span>
                 <input type="password" name="password" id="password" placeholder="6+ characters">
             </label>
-            <label for="Repetpassword">
-                <span>Repetir Contraseña</span>
-                <input type="Repetpassword" name="Repetpassword" id="Repetpassword" placeholder="6+ characters">
-            </label>
-            <button type="submit" class="submit-btn">Crear cuenta</button>
+            <button type="submit" class="submit-btn">Iniciar</button>
             <div class="separator">
                 <hr>
                 <span>O</span>
@@ -50,11 +37,12 @@
                     <picture>
                         <img src="../img/logoGoogle.png" alt="logo google">
                     </picture>
-                    <span>Registrarse con Google</span>
+                    <span>Iniciar sesión con Google</span>
                 </button>
                 </button>
             </div>
         </form>
     </div>
+</div>
 </body>
 </html>
