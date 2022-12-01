@@ -1,0 +1,80 @@
+<div class="menu-btn">
+    <i class="fas fa-bars"></i>
+</div>
+<div class="container-UFPS-deportivo">
+    <nav class="nav-main">
+        <a href="/home" class="nav-img">
+            <img src="../img/LogoDeportivo.png" alt="Logo del club deportivo UFPS" class="nav-logo" />
+        </a>
+        {{#if user}}
+        <ul class="nav-menu">
+            <li>
+                <a href="/home"><span>Home</span></a>
+            </li>
+            <li>
+                <a href=""><span>Noticias</span></a>
+            </li>
+            <li>
+                <a href=""><span>Eventos</span></a>
+            </li>
+            <li>
+                <a href=""><span>Resultados</span></a>
+            </li>
+            <li>
+                <a href=""><span>Premios</span></a>
+            </li>
+            <li>
+                <a href=""><span>Patrocinadores</span></a>
+            </li>
+            <li>
+                <a href=""><span>Equipos</span></a>
+            </li>
+            <li>
+                <a href="/perfil">
+                    <button type="submit" class="submit-btn-nav">Perfil</button>
+                </a>
+            </li>
+            <li>
+                <a href="/logout">
+                    <button type="submit" class="submit-btn-nav">Cerrar sesión</button>
+                </a>
+            </li>
+        </ul>
+        {{else}}
+        <ul class="nav-menu">
+            <li>
+                <a href="/home"><span>Home</span></a>
+            </li>
+            <li>
+                <a href=""><span>Noticias</span></a>
+            </li>
+            <li>
+                <a href=""><span>Eventos</span></a>
+            </li>
+            <li>
+                <a href=""><span>Resultados</span></a>
+            </li>
+            <li>
+                <a href=""><span>Premios</span></a>
+            </li>
+            <li>
+                <a href=""><span>Patrocinadores</span></a>
+            </li>
+            <li>
+                <a href=""><span>Equipos</span></a>
+            </li>
+        <ul class="nav-seccion">
+            <li>
+                <a href="/signIn">
+                    <button type="submit" class="submit-btn-nav">Iniciar</button>
+                </a>
+            </li>
+            <li>
+                <a href="/signUp">
+                    <button type="submit" class="submit-btn-nav">Registrar</button>
+                </a>
+            </li>
+        </ul>
+        {{/if}}
+    </nav>
+</div>

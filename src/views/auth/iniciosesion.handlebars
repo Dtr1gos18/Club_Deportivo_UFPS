@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/registro.css">
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Iniciar Sesión</title>
 </head>
 <body>
     <div class="card">
     <div class="container">
         <div class="top">
             <h3>Iniciar Sesión</h3>
-            <a href="/html/index.html">
-                <button type="submit" class="btn-back"><img src="../img/back.png" alt="boton-back"/></button>
-            </a>
         </div>
-        <form action="" method>
+        <form action="/signIn" method="post">
             <label for="email">
                 <span>Email</span>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" >
             </label>
             <label for="password">
                 <span>Contraseña</span>
-                <input type="password" name="password" id="password" placeholder="6+ characters">
+                <input type="password" name="password" placeholder="6+ characters" >
             </label>
-            <button type="submit" class="submit-btn">Iniciar</button>
+            <button type="submit" class="submit-btn">Iniciar sesión</button>
             <div class="separator">
                 <hr>
                 <span>O</span>
