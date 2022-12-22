@@ -6,6 +6,8 @@ const flash = require("connect-flash");
 const session = require("express-session");
 const mySqlStore = require("express-mysql-session")(session);
 const passport = require("passport");
+const multer = require("multer");
+const { PORT } = require ("./config.js");
 
 const {database} = require('./keys');
 
@@ -14,7 +16,6 @@ const app = express();
 require("./lib/passport");
 
 // settings
-app.set("port", process.env.PORT || 6969);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.handlebars', hbs.engine({
     defaultLayout: 'main',
@@ -34,10 +35,19 @@ app.use(session({
 }));
 app.use(morgan("dev"));
 app.use(flash());
-app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+const almacenar = multer.diskStorage({
+    destination: path.join(__dirname, 'public/img/imgNoticias'),
+    filename: (req, file, cb) => {
+        cb(null, new Date().getTime() + path.extname(file.originalname));
+    }
+});
+app.use(multer({storage: almacenar}).single('img'));
+
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 //global variables
 app.use((req, res, next) => {
@@ -51,11 +61,13 @@ app.use((req, res, next) => {
 app.use(require("./routes/index"));
 app.use(require("./routes/authentication"));
 app.use('/noticias', require("./routes/noticias"));
+app.use('/calendario', require("./routes/eventos"));
 
 // public
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(__dirname + '/public'))
 
 // starting the server
-app.listen(app.get("port"), () => {
-    console.log("server on port", app.get("port"));
+app.listen(PORT, () => {
+    console.log(`Server on port ${PORT}`);
 });
+

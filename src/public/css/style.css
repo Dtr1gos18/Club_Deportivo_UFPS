@@ -31,11 +31,11 @@ h3{
     opacity: 95;
     width: 72px;
     height: 50%;
+    z-index: 2;
   }
 .nav-main {
   width: 100%;
   background-color: #161717;
-  opacity: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,6 +59,7 @@ h3{
 .nav-main ul.nav-menu {
   flex: 1;
   margin-left: 20px;
+  z-index: 1;
 }
 
 /*menu responsive*/
@@ -87,71 +88,6 @@ h3{
   opacity: 0.75;
 }
 
-/*Noticia de la semana*/
-.new-week {
-  width: 100%;
-  height: 500px;
-  padding: 0 10%;
-  padding-bottom: 50px;
-  background: url(../img/ceremoni-mundial.jpg)no-repeat center center/90% 100%;
-  color: white;
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-.btn-new-week {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 20px;
-  background: #161717;
-  opacity: 0.9;
-  border: 1px solid white;
-  margin-top: 10px;
-}
-.btn-new-week:hover {
-  opacity: 0.5;
-}
-
-/*Estilos a la linea division*/
-.division-hr hr{
-  width:90%; 
-  margin-left:5%; 
-  margin-right:5%;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-.division-hr h3{
-  margin-left: 5%;
-}
-
-.new-card {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  color: white;
-  margin: 5% 5%;
-}
-
-.new-card img {
-  width: 100%;
-  height: 170px;
-  border-radius: 5px;
-}
-.new-card h3 {
-  font-size: 18px;
-  margin: 7px 0;
-}
-.new-card a {
-  padding: 7px 0;
-  text-transform: uppercase;
-  display: inline-block;
-}
-.new-card a:hover {
-  text-decoration: underline;
-}
-
 .info {
   padding: 20px 0px;
   background-color: #161717;
@@ -176,7 +112,7 @@ h3{
   margin-top: 30px;
   color: white;
 }
-@media (max-width: 1200px){
+@media (max-width: 930px){
   .menu-btn{
     display: block;
   }
@@ -211,24 +147,6 @@ h3{
   .nav-main a.nav-img img.show{
     transform: translateX(0px);
     transition: transform 0.4s ease-out;
-  }
-}
-@media (max-width: 1125px) {
-  .new-card {
-    grid-template-columns: repeat(3, 1fr);
-    transition: 1.2s ease-in-out;
-  }
-}
-@media (max-width: 900px) {
-  .new-card {
-    grid-template-columns: repeat(2, 1fr);
-    transition: 1.2s ease-in-out;
-  }
-}
-@media (max-width: 623px) {
-  .new-card {
-    grid-template-columns: repeat(1, 1fr);
-    transition: 1.2s ease-in-out;
   }
 }
 @media (max-width: 540px) {

@@ -1,0 +1,123 @@
+.division{
+    display: flex;
+    align-items: center;
+}
+.division-hr hr{
+    width:90%; 
+    margin-left:5%; 
+    margin-right:5%;
+    margin-top: 10px;
+}
+.division-hr h3{
+    margin-top: 50px;
+    margin-left: 5%;
+}
+.division-hr a{
+    margin-top: 50px;
+    position: absolute;
+    right: 5%;
+}
+
+/*noticias*/
+.new-card-noticias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    color: white;
+    margin: 2% 5%;
+}
+.new-card-noticias img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    border-radius: 10px;
+}
+.new-card-noticias #zoom img {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+.new-card-noticias h3 {
+    font-size: 1.25rem;
+    margin: 7px 0;
+}
+.new-card-noticias a{
+    padding: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/*botones*/
+.btn-new-card-noticias {
+    border: 1px solid #772123;
+    border-radius: 8px;
+    background-color: rgba(119, 33, 35, 0.5);
+}
+.btn-new-cards-editar {
+    border: 1px solid #213777;
+    border-radius: 8px;
+    background-color: rgba(28, 37, 71, 0.8);
+}
+.btn-new-cards-eliminar {
+    border: 1px solid #772123;
+    border-radius: 8px;
+    background-color: rgba(119, 33, 35, 0.5);
+}
+
+
+figure{
+    overflow: hidden;
+}
+
+/*hovers*/
+/*zoom*/
+.new-card-noticias #zoom:hover img{
+    transform: scale(1.25);
+}
+
+/*Boton cambio color*/
+.btn-new-card-noticias:hover {
+    background-color: #772123;
+}
+.btn-new-cards-eliminar:hover{
+    background-color: #772123;
+}
+.btn-new-cards-editar:hover{
+    background-color: #213777;
+}
+
+.submit-btn{
+    background-color: #822225;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 12pt;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    opacity: 0.75;
+}
+
+@media (max-width: 1250px) {
+    .new-card-noticias {
+        grid-template-columns: repeat(3, 1fr);
+        transition: 1.2s ease-in-out;
+    }
+}
+
+@media (max-width: 936px) {
+    .new-card-noticias {
+        grid-template-columns: repeat(2, 1fr);
+        transition: 1.2s ease-in-out;
+    }
+}
+
+@media (max-width: 621px) {
+    .new-card-noticias {
+        grid-template-columns: repeat(1, 1fr);
+        transition: 1.2s ease-in-out;
+    }
+}

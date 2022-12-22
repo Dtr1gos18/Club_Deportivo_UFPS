@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" href="/css/noticia.css" />
+</head>
+<div class="division-hr">
+    <div class="division">
+        {{#if user.admin }}
+        <h3>ULTIMAS NOTICIAS</h3>
+        <a href="/noticias/agregar">
+            <button type="submit" class="submit-btn">Agregar noticia</button>
+        </a>
+        {{else}}
+        <h3>ULTIMAS NOTICIAS</h3>
+        {{/if}}
+    </div>
+    <hr>
+</div>
+    <div class="new-card-noticias">
+        {{#if user.admin }}
+        {{#each noticias }}
+            <div id="zoom">
+                <figure>
+                    <img src={{img}} alt="imagen-noticia" />
+                </figure>
+                <h3>{{titulo}}</h3>
+                <h4>{{nombreequipo}}</h4>
+                <p>{{timeago fecha}}</p>
+                <a href="/noticias/mostrarNoticia/{{id}}" class="btn-new-card-noticias">Veer más<i class="fas fa-angle-double-right"></i></a>
+                <a href="/noticias/mostrar/{{id}}" class="btn-new-cards-editar"><i class="fa-solid fa-pen-to-square"></i></a>
+                <a href="/noticias/eliminar/{{id}}" class="btn-new-cards-eliminar"><i class="fa-solid fa-trash"></i></a>
+            </div>
+        {{/each}}
+        {{else}}
+        {{#each noticias }}
+            <div id="zoom">
+                <figure>
+                    <img src={{img}} alt="imagen-noticia" />
+                </figure>
+                <h3>{{titulo}}</h3>
+                <h4>{{nombreequipo}}</h4>
+                <p>{{timeago fecha}}</p>
+                <a href="#" class="btn-new-cards">Veer más<i class="fas fa-angle-double-right"></i></a>
+            </div>
+        {{/each}}
+        {{/if}}
+        
+    </div>

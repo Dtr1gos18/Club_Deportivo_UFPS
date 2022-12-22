@@ -1,16 +1,38 @@
-<link rel="stylesheet" href="../css/registro.css">
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h3>Bienvenido {{user.name}}</h3>
-                    <h4>{{user.email}}</h4>
-                    <a href="/actualizarP" class="btn btn-primary m-4">
-                        Actualizar Perfil
-                    </a>
-                </div>
-            </div>
+<head>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-completed">
+            <h3>Bienvenido {{user.name}}</h3>
+            <a href="/home">
+                <i class="text-2xl fa-solid fa-backward"></i>
+            </a>
         </div>
+        <form action="/perfil" method="post">
+            <div class="name-completed">
+                <label for="name">
+                    <span>Nombre</span>
+                    <input type="text" name="name" value="{{user.name}}" id="name" disabled autofocus required>
+                </label><!--  for referencia al id del input-->
+                <label for="lastName">
+                    <span>Apellido</span>
+                    <input type="text" name="lastName" value="{{user.lastName}}" id="lastName" disabled required>
+                </label>
+            </div>
+            <label for="email">
+                <span>Email</span>
+                <input type="email" name="email" value="{{user.email}}" id="email" disabled required>
+            </label>
+            <label for="password">
+                <span>Contraseña</span>
+                <input type="password" name="password" placeholder="6+ characters" id="password" disabled required>
+            </label>
+            <div class="perfil-btn">
+                <button type="button" class="submit-btn-editar" inputmode="" id="habilitar">Editar</button>
+                <button type="submit" class="submit-btn-editar" id="desabilitar">Guardar cambios</button>
+            </div>
+        </form>
     </div>
-</div>
+</body>

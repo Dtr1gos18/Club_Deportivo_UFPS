@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/css/principal.css">
+<div class="container-principal">
     <header class="new-week">
         <h2 class="new-week-title">Ceremonia de apertura del Mundial Qatar 2022</h2>
         <p class="new-week-text">
@@ -7,38 +9,54 @@
         </p>
         <a href="#" class="btn-new-week">LEER MAS<i class="fas fa-angle-double-right"></i></a>
     </header>
-    <div class="division-hr">
-        <h3>ULTIMAS NOTICIAS</h3>
+    <div class="container-division">
+        <div class="division-hr">
+            <div class="ver-todo">
+                <h3>ULTIMAS NOTICIAS</h3>
+                <a href="/noticias" type="button" class="btn-ver-noticias">
+                    <p>Ver todo</p>
+                </a>
+            </div>
+            <hr>
+        </div>
+        <div class="new-card">
+            {{#each noticias }}
+            <div id="zoom">
+                <figure>
+                    <img src={{img}} alt="imagen-noticia" />
+                </figure>
+                <h3>{{titulo}}</h3>
+                <h4>{{nombreequipo}}</h4>
+                <a href="/noticias/mostrarNoticia/{{id}}" target="_blank" class="btn-new-cards">Veer más<i
+                        class="fas fa-angle-double-right"></i></a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+<div class="new-event">
+    <div class="division-hr-evento">
+        <div class="ver-todo">
+            <h3>CALENDARIO</h3>
+            <a href="/calendario" type="button" class="btn-ver-calendario">
+                <p>Ver todo</p>
+            </a>
+        </div>
         <hr>
     </div>
-    <div class="new-card">
-        <div>
-            <img src="../img/Clasificacion-ASCUN.jpg" alt="" />
-            <h3>Clasifican 171 deportistas a los juegos ASCUN</h3>
-            <p>la Universidad Francisco de Paula Santander cumplió una destacada participación en los juegos zonales
-                universitarios ASCUN que se realizaron del 19 al 21 de mayo en el campus de la institución</p>
-            <a href="#" class="btn-new-cards">Leer más<i class="fas fa-angle-double-right"></i></a>
+    <div class="container-cards-evento">
+        {{#each eventos }}
+        <div class="new-card-evento">
+            <h2>{{nombre}}</h2>
+            <div class="new-card-division-evento">
+                <h3>{{fecha}}</h3>
+                <div class="new-card-columna-evento">
+                    <h4>Ubicación:&nbsp{{lugar}}</h4>
+                    <h4>Tipo:&nbsp{{nombreequipo}}</h4>
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="../img/sede-ASCUN.jpg" alt="" />
-            <h3>Fiesta deportiva universitaria ASCUN</h3>
-            <p>Con alegría y expectativa se prepara la Universidad Francisco de Paula Santander para ser sede de los
-                Juegos Zonales Universitarios 2022</p>
-            <a href="#" class="btn-new-cards">Leer más<i class="fas fa-angle-double-right"></i></a>
-        </div>
-        <div>
-            <img src="../img/inscripciones.jpg" alt="" />
-            <h3>Inscripciones abiertas</h3>
-            <p>La División de Cultura, Recreación y Deporte de la Universidad llevará acabo el proceso de inscripciones
-                para conformar los grupos representativos culturales y deportes</p>
-            <a href="#" class="btn-new-cards">Leer más<i class="fas fa-angle-double-right"></i></a>
-        </div>
-        <div>
-            <img src="../img/olimpiadas-deportivas.jpg" alt="" />
-            <h3>Iniciaron las XXIII Olimpiadas</h3>
-            <p>Con un desfile de los equipos participantes alrededor de la institución, se dio inicio a la XXIII versión
-                de las Olimpiadas Deportivas UFPS</p>
-            <a href="#" class="btn-new-cards">Leer más<i class="fas fa-angle-double-right"></i></a>
-        </div>
+        {{/each}}
     </div>
-    
+</div>
+</div>

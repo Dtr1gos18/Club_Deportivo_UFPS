@@ -1,0 +1,51 @@
+<head>
+    <link rel="stylesheet" href="/css/evento.css" />
+</head>
+<div class="division-hr-evento">
+    <div class="division-evento">
+        {{#if user.admin }}
+        <h3>PROXIMOS ENCUENTROS</h3>
+        <a href="/calendario/agregar">
+            <button type="submit" class="submit-btn-evento">Agregar evento</button>
+        </a>
+        {{else}}
+        <h3>PROXIMOS ENCUENTROS</h3>
+        {{/if}}
+    </div>
+    <hr>
+</div>
+<div class="container-cards-evento">
+    {{#if user.admin }}
+    {{#each eventos }}
+    <div class="new-card-evento">
+        <h2>{{nombre}}</h2>
+        <div class="new-card-division-evento">
+            <h3>{{fecha}}</h3>
+            <div class="new-card-columna-evento">
+                <h4>Ubicación:&nbsp{{lugar}}</h4>
+                <h4>Tipo:&nbsp{{nombreequipo}}</h4>
+            </div>
+        </div>
+        <div class="btn-evento">
+            <a href="/calendario/mostrar/{{id}}" class="btn-new-cards-editar-evento"><i
+                    class="fa-solid fa-pen-to-square"></i></a>
+            <a href="/calendario/eliminar/{{id}}" class="btn-new-cards-eliminar-evento"><i
+                    class="fa-solid fa-trash"></i></a>
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+    {{#each eventos }}
+    <div class="new-card-evento">
+        <h3>{{nombre}}</h3>
+        <div class="new-card-division-evento">
+            <h4>{{fecha}}</h4>
+            <div class="new-card-columna-evento">
+                <h4>{{lugar}}</h4>
+                <h4>{{nombreequipo}}</h4>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
+</div>

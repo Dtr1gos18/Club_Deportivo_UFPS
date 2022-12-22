@@ -4,6 +4,7 @@ const stratieLocal = require('passport-local').Strategy;
 const pool = require('../database');
 const helpers = require('../lib/helpers');
 
+//registro de usuario
 passport.use('local.signUp', new stratieLocal({
     usernameField: 'email',
     passwordField: 'password',
@@ -50,5 +51,6 @@ passport.use('local.signIn', new stratieLocal({
         return done(null, false, req.flash('message','El email no existe'));
     }
 }));
+
 
 module.exports = passport;

@@ -1,0 +1,45 @@
+<head>
+    <link rel="stylesheet" href="/css/editarNoticia.css" />
+</head>
+
+<body>
+    <div class="container-editar">
+        <div class="top-editar">
+            <h3>Editar noticia</h3>
+            <a href="/noticias">
+                <i class="text-2xl fa-solid fa-backward"></i>
+            </a>
+        </div>
+        <form action="/noticias/editar/{{noticia.id}}" enctype="multipart/form-data" method="post">
+            <label for="titulo">
+                <span>Titulo de la noticia</span>
+                <input type="text" value="{{noticia.titulo}}" name="titulo" required autofocus>
+            </label>
+            <div class="textarea">
+                <label for="descripcion">
+                    <span>Descripción</span>
+                </label>
+                <textarea name="descripcion" value="" cols="20" rows="5" required>{{noticia.descripcion}}</textarea>
+            </div>
+            <label for="img">
+                <span>Imagen</span>
+                <input type="file" name="img" required>
+            </label>
+            <label class="tipodeporte">   
+                <span class="tipodeporte">Tipo de deporte</span>
+                <select name="tipodeporte" class="tipodeporte" required>
+                    {{#each deporte}}
+                    <option>{{nombre}}</option>
+                    {{/each}}
+                </select>
+            </label>
+            <label for="fecha">
+                <span>Fecha</span>
+                <input type="datetime-local" name="fecha" required>
+            </label>
+            <button type="submit" class="submit-btn-editar">Guardar cambios</button>
+        </form>
+    </div>
+</body>
+
+</html>

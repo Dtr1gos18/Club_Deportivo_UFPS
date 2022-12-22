@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.warning{
+    display: flex;
+    flex-direction: row;
+    border-radius: .3rem;
+    padding: 10px;
+    text-align: center;
+    width: auto;
+    margin: 1rem;
+    gap: 10px;
+}
+
+.advice{
+    background-color: #D3E9DB;
+    border: solid 2px cadetblue;
+    color: #587862;
+}
+
+.success{
+    background-color: #D3E9DB;
+    border: none;
+    color: rgb(31,83,44);
+    font-size: 14px;
+}

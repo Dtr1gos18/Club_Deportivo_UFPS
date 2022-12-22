@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href="/css/editarCalendario.css">
+    <link rel="stylesheet" href="/css/agregarDeporte.css">
+</head>
+
+<body>
+    <div class="container-evento-editar">
+        <div class="top-evento-editar">
+            <h3>Editar evento</h3>
+            <a href="/calendario">
+                <i class="text-2xl fa-solid fa-backward"></i>
+            </a>
+        </div>
+        <form action="/calendario/editar/{{evento.id}}" method="post">
+            <label for="titulo">
+                <span>Nombre del evento</span>
+                <input type="text" name="nombre" value="{{evento.nombre}}" required autofocus>
+            </label>
+            <div class="textarea">
+                <label for="descripcion">
+                    <span>Descripción</span>
+                </label>
+                <textarea name="descripcion" cols="20" rows="5" required>{{evento.descripcion}}"</textarea>
+            </div>
+            <label for="lugar">
+                <span>Lugar</span>
+                <input type="text" name="lugar" value="{{evento.lugar}}" required>
+            </label>
+            <label class="tipoevento">
+                <span class="tipoevento">Tipo de evento</span>
+                <select name="tipoevento" class="tipoevento" required>
+                    {{#each deporte}}
+                    <option value={{id}}>{{nombre}}</option>
+                    {{/each}}
+                </select>
+            </label>
+            <label for="fecha">
+                <span>Fecha</span>
+                <input type="datetime-local" name="fecha" value="{{evento.fecha}}" required>
+            </label>
+            <button type="submit" class="submit-btn-evento-editar">Guardar</button>
+        </form>
+    </div>
+</body>

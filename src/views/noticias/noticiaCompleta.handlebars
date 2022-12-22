@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" href="/css/noticiaCompleta.css" />
+</head>
+<div class="new-card-noticiasCompleta">
+    <div id="zoomcompleta">
+        <h1>{{noticia.titulo}}</h1>
+        <div class="division-hr">
+            <hr>
+        </div>
+        <figure>
+            <div class="imagen-noticia">
+                <img src={{noticia.img}} alt="imagen-noticia" />
+            </div>
+        </figure>
+        <h3>{{noticia.nombreequipo}}</h3>
+        <h4>{{timeago noticia.fecha}}</h4>
+        <p>{{noticia.descripcion}}</p>
+    </div>
+</div>

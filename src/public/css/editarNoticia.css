@@ -1,0 +1,82 @@
+.container-editar{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 650px; 
+    border: 3px solid #212121;
+    padding: 30px 10px;
+    border-radius: 10px;
+    background-color: rgba(22, 23, 23, 0.5);
+}
+
+.top-editar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.top-editar a{
+    position: absolute;
+    right: 35%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+label span{
+    font-weight: 700;
+    color: white;
+}
+label input{
+    width: 100%;
+    background-color: #212121;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 12pt;
+    transition: background-color 0.2s, border 0.2s;
+}
+textarea{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #212121;
+    border-radius: 10px;
+    color: white;
+    font-size: 12pt;
+}
+select{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #212121;
+    border-radius: 10px;
+    color: white;
+    font-size: 12pt;
+}
+
+.submit-btn-editar{
+    background-color: #822225;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 14pt;
+    cursor: pointer;
+}
+.submit-btn-editar:hover{
+    opacity: 0.75;
+}

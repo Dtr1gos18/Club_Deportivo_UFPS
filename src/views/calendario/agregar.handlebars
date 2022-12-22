@@ -1,0 +1,67 @@
+<head>
+    <link rel="stylesheet" href="/css/agregarCalendario.css">
+    <link rel="stylesheet" href="/css/agregarDeporte.css">
+</head>
+
+<body>
+    <div class="container-evento">
+        <div class="top-evento">
+            <h3>Agregar evento</h3>
+            <a href="/calendario">
+                <i class="text-2xl fa-solid fa-backward"></i>
+            </a>
+        </div>
+        <form action="/calendario/agregar" method="post">
+            <label for="nombre">
+                <span>Nombre del evento</span>
+                <input type="text" name="nombre" required autofocus>
+            </label>
+            <div class="textarea">
+                <label for="descripcion">
+                    <span>Descripción</span>
+                </label>
+                <textarea name="descripcion" cols="20" rows="5" required></textarea>
+            </div>
+            <label for="lugar">
+                <span>Lugar</span>
+                <input type="text" name="lugar" required>
+            </label>
+            <label class="tipoevento">
+                <span class="tipoevento">Tipo de evento</span>
+                <select name="tipoevento" class="tipoevento" required>
+                    {{#each deporte}}
+                    <option value={{id}}>{{nombre}}</option>
+                    {{/each}}
+                </select>
+            </label>
+            <label for="fecha">
+                <span>Fecha</span>
+                <input type="datetime-local" name="fecha" required>
+            </label>
+            <button type="submit" class="submit-btn-evento">Guardar</button>
+            <div class="separator">
+                <hr>
+                <span>Agregar nuevo tipo</span>
+                <hr>
+            </div>
+            <button id="abrirModal" type="button" class="submit-btn-otro">Nuevo tipo</button>
+        </form>
+    </div>
+    <div id="modal" class="container-modal">
+        <div class="content-modal">
+            <div class="top-modal">
+                <h3>Agregar tipo</h3>
+                <a id="cerrarModal" type="button">
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
+                </a>
+            </div>
+            <form action="/calendario/agregarDeporte" method="post">
+                <label for="nombre">
+                    <span>Tipo</span>
+                    <input type="text" name="nombre" required autofocus>
+                </label>
+                <button id="cerrarModal" type="submit" class="submit-btn-modal">Agregar</button>
+            </form>
+        </div>
+    </div>
+</body>
