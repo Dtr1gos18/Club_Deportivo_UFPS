@@ -47,7 +47,6 @@ router.get('/mostrar/:id', isLoggedIn, async(req, res) => {
     const { id } = req.params;
     const deporte = await dbpool.query('SELECT * FROM deportes')
     const evento = await dbpool.query('SELECT * FROM eventos WHERE id = ?', [id]);
-    console.log(evento[0]);
     res.render('calendario/editar', {evento: evento[0], deporte});
 });
 

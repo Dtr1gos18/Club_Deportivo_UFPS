@@ -34,20 +34,11 @@ router.get('/perfil', isLoggedIn, (req, res) => {
     res.render('home/perfil')
 });
 
-router.post('/perfil', isLoggedIn, async (req, res) => {
-    const { name, lastName, email, password } = req.body;
-    const newUser = {
-        name,
-        lastName,
-        email,
-        password
-    };
-    newUser.password = await helpers.encryPassword(password);
-    await pool.query('UPDATE users SET ? WHERE id = ?', [newUser, req.user.id]);
-    req.flash('success', 'Perfil actualizado correctamente');
-    res.redirect('/perfil');
-});
-
+router.post('/perfil', isLoggedIn, passport.authenticate('local.editProfile', {
+    successRedirect: '/perfil',
+    failureRedirect: '/',
+    failureFlash: true
+}));
 
 //cerrar sesion
 router.get('/logout', isLoggedIn, function(req, res, next) {

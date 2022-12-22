@@ -56,7 +56,6 @@ router.get('/mostrar/:id', isLoggedIn, async(req, res) => {
     const { id } = req.params;
     const deporte = await dbpool.query('SELECT * FROM deportes')
     const noticia = await dbpool.query('SELECT * FROM noticias WHERE id = ?', [id]);
-    console.log(noticia[0]);
     res.render('noticias/editar', {noticia: noticia[0], deporte});
 });
 
