@@ -23,7 +23,7 @@ router.get('/signIn', isNotLoggedIn, (req, res) => {
 
 router.post('/signIn', isNotLoggedIn, (req, res, next) => {
     passport.authenticate('local.signIn',{ 
-        successRedirect: '/home',
+        successRedirect: '/',
         failureRedirect: '/signIn',
         failureFlash: true
     })(req, res, next);
@@ -53,7 +53,7 @@ router.post('/perfil', isLoggedIn, async (req, res) => {
 router.get('/logout', isLoggedIn, function(req, res, next) {
     req.logout(function(err) {
         if (err) { return next(err); }
-        res.redirect('/home');
+        res.redirect('/');
     });
 });
 
