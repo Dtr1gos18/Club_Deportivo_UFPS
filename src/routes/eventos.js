@@ -18,7 +18,7 @@ router.post('/agregarDeporte', async(req, res) => {
     };
     await dbpool.query('INSERT INTO deportes set ?', [newDeporte]);
     req.flash('success', 'Tipo agregado correctamente');
-    res.redirect('calendario/agregar');
+    res.redirect('/calendario/agregar');
 });
 
 //ruta para guardar los nuevos eventos

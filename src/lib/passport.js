@@ -52,5 +52,4 @@ passport.use('local.signIn', new stratieLocal({
     }
 }));
 
-
 module.exports = passport;
