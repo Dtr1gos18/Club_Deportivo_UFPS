@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/"
+    "dev": "nodemon src/",
+    "start": "node src/index.js"
   },
-  "repository": {
+    "repository": {
     "type": "git",
     "url": "git+https://github.com/Jefferson56/Club_Deportivo_UFPS.git"
   },
